@@ -1,0 +1,60 @@
+ 
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.js"></script>
+    <script src="mc2048.js"></script>
+    <style>
+    #container {
+        width: 100%;
+    }
+    #left-container {
+        text-align: center;
+    }
+    .content-container {
+        display: block;
+        float:left;
+        margin: 5px;
+        border: 1px solid black;
+        padding: 10px;
+    }
+    #buttons {
+        width: 100%;
+        text-align: center;
+    }
+    .info {
+        display: block;
+        float:left;
+        width: 33%;
+        font-size: 24px;
+        font-weight: bold;
+        font-family: serif;
+    }
+    </style>
+  </head>
+  <body>
+  <div id='container'>
+  <div id='left-container' class='content-container'>
+    <div id='info'>
+        <div id='score' class="info">1000000</div>
+        <div id='topvalue' class="info">2048</div>
+        <div id='numberOfMoves' class="info">10000</div>
+    </div>
+    <div id='canvas-holder'></div>
+    <div id='buttons'><button name="Start" onclick="start()">Start</button><button name="Stop" onclick="stop()">Stop</button><button name="Reset" onclick="reset()">Reset</button></div>
+  </div>
+  <div id='right-container' class='content-container'>
+    this is the right container
+    <div id='chart-container'>
+    <canvas id="chart" width=400 height=400></canvas>
+    </div>
+    <p>
+    Suggestion: <span id='suggestion'>NO MOVE</span>
+    Move taken: <span id='direction'>NO MOVE</span>
+    </p>
+  </div>
+  </div>
+  
+  
+  </body>
+</html>
